@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro di Classe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Registro di Classe</h2>
+
+  <div id="creaRegistroContainer">
+    <h3>Crea un nuovo registro</h3>
+    <label for="sezione">Nome Sezione:</label>
+    <input type="text" id="sezione" required>
+
+    <label for="materia">Nome Materia:</label>
+    <input type="text" id="materia" required>
+
+    <button type="button" onclick="creaRegistro()">Crea Registro</button>
+  </div>
+
+  <div id="registri">
+    <!-- Qui verranno aggiunti dinamicamente i registri -->
+  </div>
+
+  <!-- Aggiunta la sezione dettaglioRegistro -->
+  <div id="dettaglioRegistro" style="display:none;">
+    <h3>Dettaglio del Registro</h3>
+    <p id="infoRegistro"></p>
+    <table id="dettaglioStudenti">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Cognome</th>
+          <th>Telefono</th>
+          <th>Email</th>
+          <th>Modifica</th>
+          <th>Cancella</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Qui verranno aggiunti dinamicamente gli studenti del registro selezionato -->
+      </tbody>
+    </table>
+    <button onclick="tornaAllaListaRegistri()">Torna alla Lista</button>
+  </div>
+
+  <div id="formContainer" style="display:none;">
+    <form id="studentForm">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required>
+
+      <label for="cognome">Cognome:</label>
+      <input type="text" id="cognome" required>
+
+      <label for="telefono">Numero di Telefono:</label>
+      <input type="tel" id="telefono" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+
+      <button type="button" onclick="aggiungiStudente()">Aggiungi Studente</button>
+    </form>
+
+    <table id="registro">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Cognome</th>
+          <th>Telefono</th>
+          <th>Email</th>
+          <th>Modifica</th>
+          <th>Cancella</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Qui verranno aggiunti dinamicamente gli studenti -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
